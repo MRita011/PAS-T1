@@ -9,9 +9,8 @@ public class AnalogClock implements Observer {
 
     @Override
     public void update(Subject theChangedSubject) {
-        if (theChangedSubject == timer) {
+        if (theChangedSubject == timer)
             draw();
-        }
     }
 
     public void draw() {
