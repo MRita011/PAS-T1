@@ -9,19 +9,10 @@ public class ClockTimer extends Subject {
         this.minute = minute;
         this.second = second;
     }
-
-    public int getHour() {
-        return hour;
-    }
-
-    public int getMinute() {
-        return minute;
-    }
-
-    public int getSecond() {
-        return second;
-    }
-
+    public int getHour() {return hour;}
+    public int getMinute() { return minute; }
+    public int getSecond() { return second;}
+    
     public void tick() {
         second++;
 
@@ -29,12 +20,10 @@ public class ClockTimer extends Subject {
             second = 0;
             minute++;
         }
-
         if (minute == 60) {
             minute = 0;
             hour++;
         }
-
         if (hour == 24)
             hour = 0;
 

@@ -87,24 +87,6 @@ O funcionamento pode ser resumido da seguinte maneira:
 6. Cada ConcreteObserver reage à mudança
 ```
 
-No exemplo:
-
-```text
-      ClockTimer
-          ↓
-        tick()
-          ↓
-   notifyObservers()
-          ↓
-   Observer.update()
-     ↙        ↘
- Digital     Analog
-  Clock       Clock
-     ↘        ↙
-    ClockTimer
-       Pull
-```
-
 ## Estratégia Pull
 
 Esta implementação utiliza a estratégia **Pull**.
@@ -118,17 +100,6 @@ timer.getHour();
 timer.getMinute();
 timer.getSecond();
 ```
-
-Assim:
-
-```text
-Subject → "meu estado mudou" → Observer
-                              ↓
-                         consulta
-                              ↓
-                           Subject
-```
-
 ### Pull x Push
 
 **Pull:** o Observer consulta o Subject após receber a notificação.
